@@ -1,0 +1,80 @@
+W, [2022-10-20T20:23:56.095468 #178201]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+W, [2022-10-20T20:27:53.694452 #178357]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+W, [2022-10-20T20:31:43.862991 #178482]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+W, [2022-10-20T20:36:28.311041 #178912]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2022-10-20T20:36:28.646127 #178948]  INFO -- : [218b2c86-2a71-487d-bb47-1f53bdea6736] Started HEAD "/" for 127.0.0.1 at 2022-10-20 20:36:28 +0000
+I, [2022-10-20T20:36:28.654756 #178948]  INFO -- : [218b2c86-2a71-487d-bb47-1f53bdea6736] Processing by VisitsController#index as HTML
+I, [2022-10-20T20:36:28.680627 #178948]  INFO -- : [218b2c86-2a71-487d-bb47-1f53bdea6736]   Rendered visits/index.html.erb within layouts/application (Duration: 17.2ms | Allocations: 2486)
+I, [2022-10-20T20:36:28.680780 #178948]  INFO -- : [218b2c86-2a71-487d-bb47-1f53bdea6736]   Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 2550)
+I, [2022-10-20T20:36:28.681211 #178948]  INFO -- : [218b2c86-2a71-487d-bb47-1f53bdea6736] Completed 500 Internal Server Error in 26ms (ActiveRecord: 2.9ms | Allocations: 4122)
+F, [2022-10-20T20:36:28.682532 #178948] FATAL -- : [218b2c86-2a71-487d-bb47-1f53bdea6736]   
+[218b2c86-2a71-487d-bb47-1f53bdea6736] ActionView::Template::Error (SQLite3::SQLException: no such table: visits):
+[218b2c86-2a71-487d-bb47-1f53bdea6736]     3: <h1>Visits</h1>
+[218b2c86-2a71-487d-bb47-1f53bdea6736]     4: 
+[218b2c86-2a71-487d-bb47-1f53bdea6736]     5: <div id="visits">
+[218b2c86-2a71-487d-bb47-1f53bdea6736]     6:   <% @visits.each do |visit| %>
+[218b2c86-2a71-487d-bb47-1f53bdea6736]     7:     <%= render visit %>
+[218b2c86-2a71-487d-bb47-1f53bdea6736]     8:     <p>
+[218b2c86-2a71-487d-bb47-1f53bdea6736]     9:       <%= link_to "Show this visit", visit %>
+[218b2c86-2a71-487d-bb47-1f53bdea6736]   
+[218b2c86-2a71-487d-bb47-1f53bdea6736] app/views/visits/index.html.erb:6
+I, [2022-10-20T20:36:31.050042 #178948]  INFO -- : [48583abf-46b0-4920-849b-8dcda8f63e37] Started GET "/posts" for 176.129.104.228 at 2022-10-20 20:36:31 +0000
+F, [2022-10-20T20:36:31.050609 #178948] FATAL -- : [48583abf-46b0-4920-849b-8dcda8f63e37]   
+[48583abf-46b0-4920-849b-8dcda8f63e37] ActionController::RoutingError (No route matches [GET] "/posts"):
+[48583abf-46b0-4920-849b-8dcda8f63e37]   
+I, [2022-10-20T20:36:37.502628 #178948]  INFO -- : [0fb933ed-386f-4ed4-b525-5c3013e5a94a] Started GET "/" for 176.129.104.228 at 2022-10-20 20:36:37 +0000
+I, [2022-10-20T20:36:37.503541 #178948]  INFO -- : [0fb933ed-386f-4ed4-b525-5c3013e5a94a] Processing by VisitsController#index as HTML
+I, [2022-10-20T20:36:37.505737 #178948]  INFO -- : [0fb933ed-386f-4ed4-b525-5c3013e5a94a]   Rendered visits/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 403)
+I, [2022-10-20T20:36:37.505808 #178948]  INFO -- : [0fb933ed-386f-4ed4-b525-5c3013e5a94a]   Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 434)
+I, [2022-10-20T20:36:37.505922 #178948]  INFO -- : [0fb933ed-386f-4ed4-b525-5c3013e5a94a] Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms | Allocations: 667)
+F, [2022-10-20T20:36:37.506767 #178948] FATAL -- : [0fb933ed-386f-4ed4-b525-5c3013e5a94a]   
+[0fb933ed-386f-4ed4-b525-5c3013e5a94a] ActionView::Template::Error (SQLite3::SQLException: no such table: visits):
+[0fb933ed-386f-4ed4-b525-5c3013e5a94a]     3: <h1>Visits</h1>
+[0fb933ed-386f-4ed4-b525-5c3013e5a94a]     4: 
+[0fb933ed-386f-4ed4-b525-5c3013e5a94a]     5: <div id="visits">
+[0fb933ed-386f-4ed4-b525-5c3013e5a94a]     6:   <% @visits.each do |visit| %>
+[0fb933ed-386f-4ed4-b525-5c3013e5a94a]     7:     <%= render visit %>
+[0fb933ed-386f-4ed4-b525-5c3013e5a94a]     8:     <p>
+[0fb933ed-386f-4ed4-b525-5c3013e5a94a]     9:       <%= link_to "Show this visit", visit %>
+[0fb933ed-386f-4ed4-b525-5c3013e5a94a]   
+[0fb933ed-386f-4ed4-b525-5c3013e5a94a] app/views/visits/index.html.erb:6
+W, [2022-10-20T20:38:03.010952 #178997]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+W, [2022-10-20T20:38:12.605277 #179000]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2022-10-20T20:38:12.792912 #179000]  INFO -- : Migrating to CreateCards (20221017143719)
+I, [2022-10-20T20:38:12.806082 #179000]  INFO -- : Migrating to CreateClients (20221017143741)
+I, [2022-10-20T20:38:12.813335 #179000]  INFO -- : Migrating to CreateVisits (20221018060017)
+W, [2022-10-20T20:38:20.900208 #179039]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2022-10-20T20:38:21.177936 #179075]  INFO -- : [f34ef4a5-b160-4f58-9ff0-e69801650ad1] Started HEAD "/" for 127.0.0.1 at 2022-10-20 20:38:21 +0000
+I, [2022-10-20T20:38:21.185985 #179075]  INFO -- : [f34ef4a5-b160-4f58-9ff0-e69801650ad1] Processing by VisitsController#index as HTML
+I, [2022-10-20T20:38:21.220504 #179075]  INFO -- : [f34ef4a5-b160-4f58-9ff0-e69801650ad1]   Rendered visits/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 1844)
+I, [2022-10-20T20:38:21.223388 #179075]  INFO -- : [f34ef4a5-b160-4f58-9ff0-e69801650ad1]   Rendered layout layouts/application.html.erb (Duration: 27.8ms | Allocations: 2568)
+I, [2022-10-20T20:38:21.227901 #179075]  INFO -- : [f34ef4a5-b160-4f58-9ff0-e69801650ad1] Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.9ms | Allocations: 4092)
+F, [2022-10-20T20:38:21.228963 #179075] FATAL -- : [f34ef4a5-b160-4f58-9ff0-e69801650ad1]   
+[f34ef4a5-b160-4f58-9ff0-e69801650ad1] ActionView::Template::Error (The asset "application.css" is not present in the asset pipeline.
+):
+[f34ef4a5-b160-4f58-9ff0-e69801650ad1]      6:     <%= csrf_meta_tags %>
+[f34ef4a5-b160-4f58-9ff0-e69801650ad1]      7:     <%= csp_meta_tag %>
+[f34ef4a5-b160-4f58-9ff0-e69801650ad1]      8: 
+[f34ef4a5-b160-4f58-9ff0-e69801650ad1]      9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+[f34ef4a5-b160-4f58-9ff0-e69801650ad1]     10:     <%= javascript_importmap_tags %>
+[f34ef4a5-b160-4f58-9ff0-e69801650ad1]     11:   </head>
+[f34ef4a5-b160-4f58-9ff0-e69801650ad1]     12: 
+[f34ef4a5-b160-4f58-9ff0-e69801650ad1]   
+[f34ef4a5-b160-4f58-9ff0-e69801650ad1] app/views/layouts/application.html.erb:9
+I, [2022-10-20T20:38:21.234673 #179075]  INFO -- : [69728a4a-0e70-4b86-849f-ea151425abab] Started GET "/" for 176.129.104.228 at 2022-10-20 20:38:21 +0000
+I, [2022-10-20T20:38:21.235481 #179075]  INFO -- : [69728a4a-0e70-4b86-849f-ea151425abab] Processing by VisitsController#index as HTML
+I, [2022-10-20T20:38:21.241613 #179075]  INFO -- : [69728a4a-0e70-4b86-849f-ea151425abab]   Rendered visits/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 299)
+I, [2022-10-20T20:38:21.242263 #179075]  INFO -- : [69728a4a-0e70-4b86-849f-ea151425abab]   Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 589)
+I, [2022-10-20T20:38:21.242410 #179075]  INFO -- : [69728a4a-0e70-4b86-849f-ea151425abab] Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms | Allocations: 818)
+F, [2022-10-20T20:38:21.243161 #179075] FATAL -- : [69728a4a-0e70-4b86-849f-ea151425abab]   
+[69728a4a-0e70-4b86-849f-ea151425abab] ActionView::Template::Error (The asset "application.css" is not present in the asset pipeline.
+):
+[69728a4a-0e70-4b86-849f-ea151425abab]      6:     <%= csrf_meta_tags %>
+[69728a4a-0e70-4b86-849f-ea151425abab]      7:     <%= csp_meta_tag %>
+[69728a4a-0e70-4b86-849f-ea151425abab]      8: 
+[69728a4a-0e70-4b86-849f-ea151425abab]      9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+[69728a4a-0e70-4b86-849f-ea151425abab]     10:     <%= javascript_importmap_tags %>
+[69728a4a-0e70-4b86-849f-ea151425abab]     11:   </head>
+[69728a4a-0e70-4b86-849f-ea151425abab]     12: 
+[69728a4a-0e70-4b86-849f-ea151425abab]   
+[69728a4a-0e70-4b86-849f-ea151425abab] app/views/layouts/application.html.erb:9
