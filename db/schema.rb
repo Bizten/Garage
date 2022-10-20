@@ -14,8 +14,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_18_060017) do
   create_table "cards", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "client_id", null: false
-    t.index ["client_id"], name: "index_cards_on_client_id"
+  end
+
+  create_table "clients", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "visits", force: :cascade do |t|
@@ -25,5 +29,4 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_18_060017) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "cards", "clients"
 end
