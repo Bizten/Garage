@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  get '/'
-    puts "Hello"
+  def index
+    redirect_to '/visits'
   end
 end
