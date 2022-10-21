@@ -78,3 +78,109 @@ F, [2022-10-20T20:38:21.243161 #179075] FATAL -- : [69728a4a-0e70-4b86-849f-ea15
 [69728a4a-0e70-4b86-849f-ea151425abab]     12: 
 [69728a4a-0e70-4b86-849f-ea151425abab]   
 [69728a4a-0e70-4b86-849f-ea151425abab] app/views/layouts/application.html.erb:9
+W, [2022-10-21T02:42:51.377765 #32998]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2022-10-21T02:42:51.692206 #33039]  INFO -- : [04f64733-58dc-46bf-9a1c-f1b00e708e0e] Started HEAD "/" for 127.0.0.1 at 2022-10-21 02:42:51 +0200
+I, [2022-10-21T02:42:51.694535 #33039]  INFO -- : [04f64733-58dc-46bf-9a1c-f1b00e708e0e] Processing by VisitsController#index as HTML
+I, [2022-10-21T02:42:51.706955 #33039]  INFO -- : [04f64733-58dc-46bf-9a1c-f1b00e708e0e]   Rendered visits/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 2522)
+I, [2022-10-21T02:42:51.708737 #33039]  INFO -- : [04f64733-58dc-46bf-9a1c-f1b00e708e0e]   Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 5085)
+I, [2022-10-21T02:42:51.708994 #33039]  INFO -- : [04f64733-58dc-46bf-9a1c-f1b00e708e0e] Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 1.9ms | Allocations: 6692)
+I, [2022-10-21T02:43:10.076145 #33039]  INFO -- : [7e315399-29ba-4198-9adf-ad588bc78ab3] Started GET "/" for 127.0.0.1 at 2022-10-21 02:43:10 +0200
+I, [2022-10-21T02:43:10.077824 #33039]  INFO -- : [7e315399-29ba-4198-9adf-ad588bc78ab3] Processing by VisitsController#index as HTML
+I, [2022-10-21T02:43:10.081416 #33039]  INFO -- : [7e315399-29ba-4198-9adf-ad588bc78ab3]   Rendered visits/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1004)
+I, [2022-10-21T02:43:10.082776 #33039]  INFO -- : [7e315399-29ba-4198-9adf-ad588bc78ab3]   Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1564)
+I, [2022-10-21T02:43:10.083432 #33039]  INFO -- : [7e315399-29ba-4198-9adf-ad588bc78ab3] Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 1824)
+I, [2022-10-21T02:43:15.130958 #33039]  INFO -- : [02d4a134-ed6d-4d06-bed2-40961f31427f] Started GET "/visits/new" for 127.0.0.1 at 2022-10-21 02:43:15 +0200
+I, [2022-10-21T02:43:15.132726 #33039]  INFO -- : [02d4a134-ed6d-4d06-bed2-40961f31427f] Processing by VisitsController#new as HTML
+I, [2022-10-21T02:43:15.155100 #33039]  INFO -- : [02d4a134-ed6d-4d06-bed2-40961f31427f]   Rendered visits/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 2454)
+I, [2022-10-21T02:43:15.156558 #33039]  INFO -- : [02d4a134-ed6d-4d06-bed2-40961f31427f]   Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3047)
+I, [2022-10-21T02:43:15.157117 #33039]  INFO -- : [02d4a134-ed6d-4d06-bed2-40961f31427f] Completed 200 OK in 24ms (Views: 9.8ms | ActiveRecord: 1.4ms | Allocations: 7438)
+I, [2022-10-21T02:45:20.672024 #33039]  INFO -- : [613761c0-f99a-4852-b0ec-0351585a95ab] Started POST "/visits" for 127.0.0.1 at 2022-10-21 02:45:20 +0200
+I, [2022-10-21T02:45:20.674551 #33039]  INFO -- : [613761c0-f99a-4852-b0ec-0351585a95ab] Processing by VisitsController#create as TURBO_STREAM
+I, [2022-10-21T02:45:20.674946 #33039]  INFO -- : [613761c0-f99a-4852-b0ec-0351585a95ab]   Parameters: {"authenticity_token"=>"[FILTERED]", "visit"=>{"appointment"=>"202210200330", "client_id"=>"1"}, "commit"=>"Create Visit"}
+I, [2022-10-21T02:45:20.685466 #33039]  INFO -- : [613761c0-f99a-4852-b0ec-0351585a95ab] [ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: 852cf223-cd5b-4d8d-8cac-f3c6ed2789ae) to Async(default) with arguments: "VisitMailer", "new_visit_email", "deliver_now", {:params=>{:visit=>#<GlobalID:0x0000000106764fb0 @uri=#<URI::GID gid://garage/Visit/1>>}, :args=>[]}
+I, [2022-10-21T02:45:20.688054 #33039]  INFO -- : [613761c0-f99a-4852-b0ec-0351585a95ab] Redirected to http://localhost:3000/visits/1
+I, [2022-10-21T02:45:20.689789 #33039]  INFO -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [852cf223-cd5b-4d8d-8cac-f3c6ed2789ae] Performing ActionMailer::MailDeliveryJob (Job ID: 852cf223-cd5b-4d8d-8cac-f3c6ed2789ae) from Async(default) enqueued at 2022-10-21T00:45:20Z with arguments: "VisitMailer", "new_visit_email", "deliver_now", {:params=>{:visit=>#<GlobalID:0x0000000106735cd8 @uri=#<URI::GID gid://garage/Visit/1>>}, :args=>[]}
+I, [2022-10-21T02:45:20.690118 #33039]  INFO -- : [613761c0-f99a-4852-b0ec-0351585a95ab] Completed 302 Found in 15ms (ActiveRecord: 2.0ms | Allocations: 3416)
+I, [2022-10-21T02:45:20.694640 #33039]  INFO -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [852cf223-cd5b-4d8d-8cac-f3c6ed2789ae]   Rendered visit_mailer/new_visit_email.html.erb within layouts/mailer (Duration: 0.6ms | Allocations: 181)
+I, [2022-10-21T02:45:20.695302 #33039]  INFO -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [852cf223-cd5b-4d8d-8cac-f3c6ed2789ae]   Rendered layout layouts/mailer.html.erb (Duration: 1.3ms | Allocations: 345)
+I, [2022-10-21T02:45:20.696175 #33039]  INFO -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [852cf223-cd5b-4d8d-8cac-f3c6ed2789ae]   Rendered visit_mailer/new_visit_email.text.erb within layouts/mailer (Duration: 0.5ms | Allocations: 143)
+I, [2022-10-21T02:45:20.696638 #33039]  INFO -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [852cf223-cd5b-4d8d-8cac-f3c6ed2789ae]   Rendered layout layouts/mailer.text.erb (Duration: 0.9ms | Allocations: 268)
+I, [2022-10-21T02:45:20.702191 #33039]  INFO -- : [9cf6ccaf-e364-43b8-a904-6516dda9b211] Started GET "/visits/1" for 127.0.0.1 at 2022-10-21 02:45:20 +0200
+I, [2022-10-21T02:45:20.702941 #33039]  INFO -- : [9cf6ccaf-e364-43b8-a904-6516dda9b211] Processing by VisitsController#show as TURBO_STREAM
+I, [2022-10-21T02:45:20.703138 #33039]  INFO -- : [9cf6ccaf-e364-43b8-a904-6516dda9b211]   Parameters: {"id"=>"1"}
+I, [2022-10-21T02:45:20.705127 #33039]  INFO -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [852cf223-cd5b-4d8d-8cac-f3c6ed2789ae] Delivered mail 6351eba0aae66_810f51e0-359@Mini-de-David-001.lan.mail (6.8ms)
+E, [2022-10-21T02:45:20.706269 #33039] ERROR -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [852cf223-cd5b-4d8d-8cac-f3c6ed2789ae] Error performing ActionMailer::MailDeliveryJob (Job ID: 852cf223-cd5b-4d8d-8cac-f3c6ed2789ae) from Async(default) in 19.94ms: Errno::ECONNREFUSED (Connection refused - connect(2) for 127.0.0.1:25):
+/Users/davidstern/.rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:1214:in `__connect_nonblock'
+/Users/davidstern/.rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:1214:in `connect_nonblock'
+/Users/davidstern/.rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:56:in `connect_internal'
+/Users/davidstern/.rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:137:in `connect'
+/Users/davidstern/.rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:642:in `block in tcp'
+/Users/davidstern/.rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:227:in `each'
+/Users/davidstern/.rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:227:in `foreach'
+/Users/davidstern/.rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:632:in `tcp'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/net-smtp-0.3.2/lib/net/smtp.rb:631:in `tcp_socket'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/net-smtp-0.3.2/lib/net/smtp.rb:644:in `do_start'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/net-smtp-0.3.2/lib/net/smtp.rb:609:in `start'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:109:in `start_smtp_session'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:100:in `deliver!'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/mail-2.7.1/lib/mail/message.rb:2159:in `do_delivery'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/mail-2.7.1/lib/mail/message.rb:260:in `block in deliver'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/actionmailer-7.0.4/lib/action_mailer/base.rb:588:in `block in deliver_mail'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `block in instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/actionmailer-7.0.4/lib/action_mailer/base.rb:586:in `deliver_mail'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/mail-2.7.1/lib/mail/message.rb:260:in `deliver'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/actionmailer-7.0.4/lib/action_mailer/message_delivery.rb:119:in `block in deliver_now'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/actionmailer-7.0.4/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/actionmailer-7.0.4/lib/action_mailer/message_delivery.rb:118:in `deliver_now'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/actionmailer-7.0.4/lib/action_mailer/mail_delivery_job.rb:23:in `perform'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:59:in `block in _perform_job'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/i18n-1.12.0/lib/i18n.rb:322:in `with_locale'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:58:in `_perform_job'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:20:in `_perform_job'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:46:in `perform_now'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:14:in `block in perform_now'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:25:in `block in instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `block in instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:35:in `instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:14:in `perform_now'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/logging.rb:18:in `block in perform_now'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:37:in `tagged'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:99:in `tagged'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/logging.rb:25:in `tag_logger'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/logging.rb:18:in `perform_now'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:24:in `block in execute'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/railtie.rb:54:in `block (4 levels) in <class:Railtie>'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/reloader.rb:72:in `block in wrap'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/reloader.rb:71:in `wrap'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/railtie.rb:53:in `block (3 levels) in <class:Railtie>'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:22:in `execute'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+I, [2022-10-21T02:45:20.707549 #33039]  INFO -- : [9cf6ccaf-e364-43b8-a904-6516dda9b211]   Rendered visits/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1576)
+I, [2022-10-21T02:45:20.708114 #33039]  INFO -- : [9cf6ccaf-e364-43b8-a904-6516dda9b211]   Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2138)
+I, [2022-10-21T02:45:20.708383 #33039]  INFO -- : [9cf6ccaf-e364-43b8-a904-6516dda9b211] Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 2886)
